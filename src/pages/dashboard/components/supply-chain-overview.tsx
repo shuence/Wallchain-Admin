@@ -8,6 +8,10 @@ export const SupplyChainOverview = () => {
     averageDeliveryTime: '5 hrs 30 mins',
     warehouseCapacityUtilization: '85%',
     topPerformingRoute: 'Mumbai to Pune',
+    totalorders: 100,
+    totalRevenue: '$120,000',
+    totalCost: '$80,000',
+    totalProfit: '$40,000',
   }
 
   return (
@@ -56,6 +60,22 @@ export const SupplyChainOverview = () => {
           {overviewData.topPerformingRoute}
         </div>
       </div>
+      <div className='rounded-lg border p-4'>
+        <h3 className='text-sm font-medium'>Total Orders</h3>
+        <div className='text-2xl font-bold'>{overviewData.totalorders}</div>
+        </div>
+        <div className='rounded-lg border p-4'>
+          <h3 className='text-sm font-medium'>Total Revenue</h3>
+          <div className='text-2xl font-bold'>{overviewData.totalRevenue}</div>
+          </div>
+          <div className='rounded-lg border p-4'>
+            <h3 className='text-sm font-medium'>Total Cost</h3>
+            <div className='text-2xl font-bold'>{overviewData.totalCost}</div>
+            </div>
+            <div className='rounded-lg border p-4'>
+              <h3 className='text-sm font-medium'>Total Profit</h3>
+              <div className='text-2xl font-bold'>{overviewData.totalProfit}</div>
+            </div>
     </div>
   )
 }

@@ -21,7 +21,7 @@ export const RecentShipments: React.FC = () => {
     },
     {
       id: 'SH12346',
-      destination: 'Delhi, Delhi',
+      destination: 'New Delhi, Delhi',
       driver: 'Pooja Sharma',
       status: 'Delivered',
     },
@@ -50,13 +50,15 @@ export const RecentShipments: React.FC = () => {
       {shipments.map((shipment) => (
         <div
           key={shipment.id}
-          className='flex flex-col border-b p-4' // Changed to flex-col to stack elements vertically
+          className='flex items-center justify-between border-b p-2'
         >
-          <div className='font-medium text-lg'>{shipment.id}</div> {/* ID displayed on top */}
-          <div className='text-sm'>{shipment.destination}</div>
-          <div className='text-sm'>{shipment.driver}</div>
+          <div className='font-medium'>{shipment.id}</div>
+          <div className='flex flex-col item-start justify-start'>
+            <h3>{shipment.destination}</h3>
+            <h3>{shipment.driver}</h3>
+          </div>
           <div
-            className={`font-semibold mt-2 ${shipment.status === 'Delivered' ? 'text-green-600' : 'text-yellow-600'}`}
+            className={`font-semibold ${shipment.status === 'Delivered' ? 'text-green-600' : 'text-yellow-600'}`}
           >
             {shipment.status}
           </div>
