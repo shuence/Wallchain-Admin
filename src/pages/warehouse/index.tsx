@@ -106,7 +106,7 @@ const WarehousePage: React.FC = () => {
                     fill="#8884d8"
                     dataKey="value"
                   >
-                    {shipmentStatusData.map((entry, index) => (
+                    {shipmentStatusData.map((_entry, index) => (
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                   </Pie>

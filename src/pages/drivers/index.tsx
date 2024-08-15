@@ -84,7 +84,7 @@ const DriverPage: React.FC = () => {
                   fill="#8884d8"
                   label
                 >
-                  {statusChartData.map((entry, index) => (
+                  {statusChartData.map((_entry, index) => (
                     <Cell key={`cell-${index}`} fill={['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'][index % 4]} />
                   ))}
                 </Pie>
