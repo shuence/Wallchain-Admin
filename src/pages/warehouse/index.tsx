@@ -1,28 +1,64 @@
-import React from 'react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip, Legend, BarChart, XAxis, YAxis, Bar } from 'recharts';
-import { warehouseData } from './data/warehouseData';
-import ThemeSwitch from '@/components/theme-switch';
-import { Layout } from '@/components/custom/layout';
-import { Search } from '@/components/search';
-import { TopNav } from '@/components/top-nav';
-import { UserNav } from '@/components/user-nav';
+import React from 'react'
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+import {
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell,
+  Tooltip,
+  Legend,
+  BarChart,
+  XAxis,
+  YAxis,
+  Bar,
+} from 'recharts'
+import { warehouseData } from './data/warehouseData'
+import ThemeSwitch from '@/components/theme-switch'
+import { Layout } from '@/components/custom/layout'
+import { Search } from '@/components/search'
+import { TopNav } from '@/components/top-nav'
+import { UserNav } from '@/components/user-nav'
 
 // Sample data for warehouse statistics
 const shipmentStatusData = [
-  { name: 'Active', value: warehouseData.reduce((acc, warehouse) => acc + warehouse.activeShipments, 0) },
-  { name: 'Completed', value: warehouseData.reduce((acc, warehouse) => acc + warehouse.completedShipments, 0) },
-  { name: 'Pending', value: warehouseData.reduce((acc, warehouse) => acc + warehouse.pendingShipments, 0) },
-];
+  {
+    name: 'Active',
+    value: warehouseData.reduce(
+      (acc, warehouse) => acc + warehouse.activeShipments,
+      0
+    ),
+  },
+  {
+    name: 'Completed',
+    value: warehouseData.reduce(
+      (acc, warehouse) => acc + warehouse.completedShipments,
+      0
+    ),
+  },
+  {
+    name: 'Pending',
+    value: warehouseData.reduce(
+      (acc, warehouse) => acc + warehouse.pendingShipments,
+      0
+    ),
+  },
+]
 
-const warehouseStatsData = warehouseData.map(warehouse => ({
+const warehouseStatsData = warehouseData.map((warehouse) => ({
   name: warehouse.location,
   Shipments: warehouse.totalShipments,
   Workers: warehouse.totalWorkers,
   AvgProcessingTime: warehouse.avgProcessingTime,
-}));
+}))
 
-const COLORS = ['#00C49F', '#FF8042', '#FFBB28', '#8DD1E1', '#A4DE6C', '#D0ED57'];
+const COLORS = [
+  '#00C49F',
+  '#FF8042',
+  '#FFBB28',
+  '#8DD1E1',
+  '#A4DE6C',
+  '#D0ED57',
+]
 
 const WarehousePage: React.FC = () => {
   return (
@@ -38,14 +74,17 @@ const WarehousePage: React.FC = () => {
       <Layout.Body>
         <div className='space-y-4 p-6'>
           {/* Warehouse Statistics Cards */}
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+          <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
             {/* Total Shipments Card */}
             <Card className='bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white'>
               <CardHeader>
                 <CardTitle>Total Shipments</CardTitle>
               </CardHeader>
               <CardContent className='text-3xl font-bold'>
-                {warehouseData.reduce((acc, warehouse) => acc + warehouse.totalShipments, 0)}
+                {warehouseData.reduce(
+                  (acc, warehouse) => acc + warehouse.totalShipments,
+                  0
+                )}
               </CardContent>
             </Card>
 
@@ -55,7 +94,10 @@ const WarehousePage: React.FC = () => {
                 <CardTitle>Total Workers</CardTitle>
               </CardHeader>
               <CardContent className='text-3xl font-bold'>
-                {warehouseData.reduce((acc, warehouse) => acc + warehouse.totalWorkers, 0)}
+                {warehouseData.reduce(
+                  (acc, warehouse) => acc + warehouse.totalWorkers,
+                  0
+                )}
               </CardContent>
             </Card>
 
@@ -65,7 +107,10 @@ const WarehousePage: React.FC = () => {
                 <CardTitle>Active Shipments</CardTitle>
               </CardHeader>
               <CardContent className='text-3xl font-bold'>
-                {warehouseData.reduce((acc, warehouse) => acc + warehouse.activeShipments, 0)}
+                {warehouseData.reduce(
+                  (acc, warehouse) => acc + warehouse.activeShipments,
+                  0
+                )}
               </CardContent>
             </Card>
 
@@ -75,7 +120,10 @@ const WarehousePage: React.FC = () => {
                 <CardTitle>Completed Shipments</CardTitle>
               </CardHeader>
               <CardContent className='text-3xl font-bold'>
-                {warehouseData.reduce((acc, warehouse) => acc + warehouse.completedShipments, 0)}
+                {warehouseData.reduce(
+                  (acc, warehouse) => acc + warehouse.completedShipments,
+                  0
+                )}
               </CardContent>
             </Card>
 
@@ -85,7 +133,10 @@ const WarehousePage: React.FC = () => {
                 <CardTitle>Pending Shipments</CardTitle>
               </CardHeader>
               <CardContent className='text-3xl font-bold'>
-                {warehouseData.reduce((acc, warehouse) => acc + warehouse.pendingShipments, 0)}
+                {warehouseData.reduce(
+                  (acc, warehouse) => acc + warehouse.pendingShipments,
+                  0
+                )}
               </CardContent>
             </Card>
           </div>
@@ -96,18 +147,21 @@ const WarehousePage: React.FC = () => {
               <CardTitle>Shipment Status</CardTitle>
             </CardHeader>
             <CardContent>
-              <ResponsiveContainer width="100%" height={300}>
+              <ResponsiveContainer width='100%' height={300}>
                 <PieChart>
                   <Pie
                     data={shipmentStatusData}
-                    cx="50%"
-                    cy="50%"
+                    cx='50%'
+                    cy='50%'
                     outerRadius={80}
-                    fill="#8884d8"
-                    dataKey="value"
+                    fill='#8884d8'
+                    dataKey='value'
                   >
                     {shipmentStatusData.map((_entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={COLORS[index % COLORS.length]}
+                      />
                     ))}
                   </Pie>
                   <Tooltip />
@@ -123,15 +177,15 @@ const WarehousePage: React.FC = () => {
               <CardTitle>Warehouse Statistics</CardTitle>
             </CardHeader>
             <CardContent>
-              <ResponsiveContainer width="100%" height={400}>
+              <ResponsiveContainer width='100%' height={400}>
                 <BarChart data={warehouseStatsData}>
-                  <XAxis dataKey="name" />
+                  <XAxis dataKey='name' />
                   <YAxis />
                   <Tooltip />
                   <Legend />
-                  <Bar dataKey="Shipments" fill="#8884d8" />
-                  <Bar dataKey="Workers" fill="#82ca9d" />
-                  <Bar dataKey="AvgProcessingTime" fill="#FFBB28" />
+                  <Bar dataKey='Shipments' fill='#8884d8' />
+                  <Bar dataKey='Workers' fill='#82ca9d' />
+                  <Bar dataKey='AvgProcessingTime' fill='#FFBB28' />
                 </BarChart>
               </ResponsiveContainer>
             </CardContent>
@@ -139,10 +193,10 @@ const WarehousePage: React.FC = () => {
         </div>
       </Layout.Body>
     </Layout>
-  );
-};
+  )
+}
 
-export default WarehousePage;
+export default WarehousePage
 
 // Ensure topNav is correctly defined in the context where it's used
 const topNav = [
@@ -171,4 +225,4 @@ const topNav = [
     href: '/settings',
     isActive: false,
   },
-];
+]

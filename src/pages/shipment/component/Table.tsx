@@ -1,23 +1,22 @@
-import React from 'react';
-
-// Define types for table columns
 interface Column {
-  Header: string;
-  accessor: string;
+  Header: string
+  accessor: string
 }
 
 interface TableProps<T> {
-  data: T[];
-  columns: Column[];
+  data: T[]
+  columns: Column[]
 }
 
 function Table<T>({ data, columns }: TableProps<T>) {
   return (
-    <table className="table-auto w-full">
+    <table className='w-full table-auto'>
       <thead>
         <tr>
           {columns.map((column, index) => (
-            <th key={index} className="px-4 py-2">{column.Header}</th>
+            <th key={index} className='px-4 py-2'>
+              {column.Header}
+            </th>
           ))}
         </tr>
       </thead>
@@ -25,7 +24,7 @@ function Table<T>({ data, columns }: TableProps<T>) {
         {data.map((row, index) => (
           <tr key={index}>
             {columns.map((column, colIndex) => (
-              <td key={colIndex} className="border px-4 py-2">
+              <td key={colIndex} className='border px-4 py-2'>
                 {String(row[column.accessor as keyof T])}
               </td>
             ))}
@@ -33,7 +32,7 @@ function Table<T>({ data, columns }: TableProps<T>) {
         ))}
       </tbody>
     </table>
-  );
+  )
 }
 
-export default Table;
+export default Table

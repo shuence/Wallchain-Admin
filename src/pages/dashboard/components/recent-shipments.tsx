@@ -31,20 +31,25 @@ export const RecentShipments = () => {
       driver: 'Ravi Verma',
       status: 'Delivered',
     },
-  ];
+  ]
 
   return (
     <div className='space-y-4'>
       {shipments.map((shipment) => (
-        <div key={shipment.id} className='flex items-center justify-between p-2 border-b'>
+        <div
+          key={shipment.id}
+          className='flex items-center justify-between border-b p-2'
+        >
           <div className='font-medium'>{shipment.id}</div>
           <div>{shipment.destination}</div>
           <div>{shipment.driver}</div>
-          <div className={`font-semibold ${shipment.status === 'Delivered' ? 'text-green-600' : 'text-yellow-600'}`}>
+          <div
+            className={`font-semibold ${shipment.status === 'Delivered' ? 'text-green-600' : 'text-yellow-600'}`}
+          >
             {shipment.status}
           </div>
         </div>
       ))}
     </div>
-  );
-};
+  )
+}

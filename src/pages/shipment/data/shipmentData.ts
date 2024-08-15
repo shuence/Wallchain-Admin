@@ -42,9 +42,9 @@ export const shipmentData: ShipmentData[] = [
 
 // Generate random slot status
 const getRandomStatus = () => {
-  const statuses = ['Occupied', 'Available', 'Loading', 'Unloading'];
-  return statuses[Math.floor(Math.random() * statuses.length)];
-};
+  const statuses = ['Occupied', 'Available', 'Loading', 'Unloading']
+  return statuses[Math.floor(Math.random() * statuses.length)]
+}
 
 // Sample warehouses with 10 slots each
 export const sampleWarehouses: Warehouse[] = [
@@ -57,7 +57,9 @@ export const sampleWarehouses: Warehouse[] = [
       assignedConsignment: {
         consignmentId: `CON${index + 1}`,
         type: 'Electronics',
-        deliveryTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+        deliveryTime: new Date(
+          Date.now() + (index + 1) * 3600000
+        ).toISOString(),
         destination: `Destination ${index + 1}`,
         status: 'In Transit',
       },
@@ -68,10 +70,14 @@ export const sampleWarehouses: Warehouse[] = [
         currentJob: {
           jobId: `JOB${index + 1}`,
           jobType: getRandomStatus() === 'Loading' ? 'Loading' : 'Unloading',
-          assignedTime: new Date(Date.now() - (index + 1) * 3600000).toISOString(),
+          assignedTime: new Date(
+            Date.now() - (index + 1) * 3600000
+          ).toISOString(),
         },
       },
-      estimatedUnloadTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+      estimatedUnloadTime: new Date(
+        Date.now() + (index + 1) * 3600000
+      ).toISOString(),
     })),
   },
   {
@@ -83,7 +89,9 @@ export const sampleWarehouses: Warehouse[] = [
       assignedConsignment: {
         consignmentId: `CON${index + 11}`,
         type: 'Furniture',
-        deliveryTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+        deliveryTime: new Date(
+          Date.now() + (index + 1) * 3600000
+        ).toISOString(),
         destination: `Destination ${index + 11}`,
         status: 'In Transit',
       },
@@ -94,10 +102,14 @@ export const sampleWarehouses: Warehouse[] = [
         currentJob: {
           jobId: `JOB${index + 11}`,
           jobType: getRandomStatus() === 'Loading' ? 'Loading' : 'Unloading',
-          assignedTime: new Date(Date.now() - (index + 1) * 3600000).toISOString(),
+          assignedTime: new Date(
+            Date.now() - (index + 1) * 3600000
+          ).toISOString(),
         },
       },
-      estimatedUnloadTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+      estimatedUnloadTime: new Date(
+        Date.now() + (index + 1) * 3600000
+      ).toISOString(),
     })),
   },
   {
@@ -109,7 +121,9 @@ export const sampleWarehouses: Warehouse[] = [
       assignedConsignment: {
         consignmentId: `CON${index + 21}`,
         type: 'Clothing',
-        deliveryTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+        deliveryTime: new Date(
+          Date.now() + (index + 1) * 3600000
+        ).toISOString(),
         destination: `Destination ${index + 21}`,
         status: 'In Transit',
       },
@@ -120,10 +134,14 @@ export const sampleWarehouses: Warehouse[] = [
         currentJob: {
           jobId: `JOB${index + 21}`,
           jobType: getRandomStatus() === 'Loading' ? 'Loading' : 'Unloading',
-          assignedTime: new Date(Date.now() - (index + 1) * 3600000).toISOString(),
+          assignedTime: new Date(
+            Date.now() - (index + 1) * 3600000
+          ).toISOString(),
         },
       },
-      estimatedUnloadTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+      estimatedUnloadTime: new Date(
+        Date.now() + (index + 1) * 3600000
+      ).toISOString(),
     })),
   },
   {
@@ -135,7 +153,9 @@ export const sampleWarehouses: Warehouse[] = [
       assignedConsignment: {
         consignmentId: `CON${index + 31}`,
         type: 'Books',
-        deliveryTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+        deliveryTime: new Date(
+          Date.now() + (index + 1) * 3600000
+        ).toISOString(),
         destination: `Destination ${index + 31}`,
         status: 'In Transit',
       },
@@ -146,10 +166,14 @@ export const sampleWarehouses: Warehouse[] = [
         currentJob: {
           jobId: `JOB${index + 31}`,
           jobType: getRandomStatus() === 'Loading' ? 'Loading' : 'Unloading',
-          assignedTime: new Date(Date.now() - (index + 1) * 3600000).toISOString(),
+          assignedTime: new Date(
+            Date.now() - (index + 1) * 3600000
+          ).toISOString(),
         },
       },
-      estimatedUnloadTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+      estimatedUnloadTime: new Date(
+        Date.now() + (index + 1) * 3600000
+      ).toISOString(),
     })),
   },
   {
@@ -161,7 +185,9 @@ export const sampleWarehouses: Warehouse[] = [
       assignedConsignment: {
         consignmentId: `CON${index + 41}`,
         type: 'Toys',
-        deliveryTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+        deliveryTime: new Date(
+          Date.now() + (index + 1) * 3600000
+        ).toISOString(),
         destination: `Destination ${index + 41}`,
         status: 'In Transit',
       },
@@ -172,10 +198,14 @@ export const sampleWarehouses: Warehouse[] = [
         currentJob: {
           jobId: `JOB${index + 41}`,
           jobType: getRandomStatus() === 'Loading' ? 'Loading' : 'Unloading',
-          assignedTime: new Date(Date.now() - (index + 1) * 3600000).toISOString(),
+          assignedTime: new Date(
+            Date.now() - (index + 1) * 3600000
+          ).toISOString(),
         },
       },
-      estimatedUnloadTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+      estimatedUnloadTime: new Date(
+        Date.now() + (index + 1) * 3600000
+      ).toISOString(),
     })),
   },
   {
@@ -187,7 +217,9 @@ export const sampleWarehouses: Warehouse[] = [
       assignedConsignment: {
         consignmentId: `CON${index + 51}`,
         type: 'Appliances',
-        deliveryTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+        deliveryTime: new Date(
+          Date.now() + (index + 1) * 3600000
+        ).toISOString(),
         destination: `Destination ${index + 51}`,
         status: 'In Transit',
       },
@@ -198,10 +230,14 @@ export const sampleWarehouses: Warehouse[] = [
         currentJob: {
           jobId: `JOB${index + 51}`,
           jobType: getRandomStatus() === 'Loading' ? 'Loading' : 'Unloading',
-          assignedTime: new Date(Date.now() - (index + 1) * 3600000).toISOString(),
+          assignedTime: new Date(
+            Date.now() - (index + 1) * 3600000
+          ).toISOString(),
         },
       },
-      estimatedUnloadTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+      estimatedUnloadTime: new Date(
+        Date.now() + (index + 1) * 3600000
+      ).toISOString(),
     })),
   },
   {
@@ -213,7 +249,9 @@ export const sampleWarehouses: Warehouse[] = [
       assignedConsignment: {
         consignmentId: `CON${index + 61}`,
         type: 'Furniture',
-        deliveryTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+        deliveryTime: new Date(
+          Date.now() + (index + 1) * 3600000
+        ).toISOString(),
         destination: `Destination ${index + 61}`,
         status: 'In Transit',
       },
@@ -224,10 +262,14 @@ export const sampleWarehouses: Warehouse[] = [
         currentJob: {
           jobId: `JOB${index + 61}`,
           jobType: getRandomStatus() === 'Loading' ? 'Loading' : 'Unloading',
-          assignedTime: new Date(Date.now() - (index + 1) * 3600000).toISOString(),
+          assignedTime: new Date(
+            Date.now() - (index + 1) * 3600000
+          ).toISOString(),
         },
       },
-      estimatedUnloadTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+      estimatedUnloadTime: new Date(
+        Date.now() + (index + 1) * 3600000
+      ).toISOString(),
     })),
   },
   {
@@ -239,7 +281,9 @@ export const sampleWarehouses: Warehouse[] = [
       assignedConsignment: {
         consignmentId: `CON${index + 71}`,
         type: 'Clothing',
-        deliveryTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+        deliveryTime: new Date(
+          Date.now() + (index + 1) * 3600000
+        ).toISOString(),
         destination: `Destination ${index + 71}`,
         status: 'In Transit',
       },
@@ -250,10 +294,14 @@ export const sampleWarehouses: Warehouse[] = [
         currentJob: {
           jobId: `JOB${index + 71}`,
           jobType: getRandomStatus() === 'Loading' ? 'Loading' : 'Unloading',
-          assignedTime: new Date(Date.now() - (index + 1) * 3600000).toISOString(),
+          assignedTime: new Date(
+            Date.now() - (index + 1) * 3600000
+          ).toISOString(),
         },
       },
-      estimatedUnloadTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+      estimatedUnloadTime: new Date(
+        Date.now() + (index + 1) * 3600000
+      ).toISOString(),
     })),
   },
   {
@@ -265,7 +313,9 @@ export const sampleWarehouses: Warehouse[] = [
       assignedConsignment: {
         consignmentId: `CON${index + 81}`,
         type: 'Books',
-        deliveryTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+        deliveryTime: new Date(
+          Date.now() + (index + 1) * 3600000
+        ).toISOString(),
         destination: `Destination ${index + 81}`,
         status: 'In Transit',
       },
@@ -276,10 +326,14 @@ export const sampleWarehouses: Warehouse[] = [
         currentJob: {
           jobId: `JOB${index + 81}`,
           jobType: getRandomStatus() === 'Loading' ? 'Loading' : 'Unloading',
-          assignedTime: new Date(Date.now() - (index + 1) * 3600000).toISOString(),
+          assignedTime: new Date(
+            Date.now() - (index + 1) * 3600000
+          ).toISOString(),
         },
       },
-      estimatedUnloadTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+      estimatedUnloadTime: new Date(
+        Date.now() + (index + 1) * 3600000
+      ).toISOString(),
     })),
   },
   {
@@ -291,7 +345,9 @@ export const sampleWarehouses: Warehouse[] = [
       assignedConsignment: {
         consignmentId: `CON${index + 91}`,
         type: 'Appliances',
-        deliveryTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+        deliveryTime: new Date(
+          Date.now() + (index + 1) * 3600000
+        ).toISOString(),
         destination: `Destination ${index + 91}`,
         status: 'In Transit',
       },
@@ -302,10 +358,14 @@ export const sampleWarehouses: Warehouse[] = [
         currentJob: {
           jobId: `JOB${index + 91}`,
           jobType: getRandomStatus() === 'Loading' ? 'Loading' : 'Unloading',
-          assignedTime: new Date(Date.now() - (index + 1) * 3600000).toISOString(),
+          assignedTime: new Date(
+            Date.now() - (index + 1) * 3600000
+          ).toISOString(),
         },
       },
-      estimatedUnloadTime: new Date(Date.now() + (index + 1) * 3600000).toISOString(),
+      estimatedUnloadTime: new Date(
+        Date.now() + (index + 1) * 3600000
+      ).toISOString(),
     })),
   },
-];
+]

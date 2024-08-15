@@ -1,7 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { RecentShipments } from "../recent-shipments";
-import { SupplyChainOverview } from "../supply-chain-overview";
-import { Button } from "@/components/custom/button";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { RecentShipments } from '../recent-shipments'
+import { SupplyChainOverview } from '../supply-chain-overview'
 
 export function OverviewTab() {
   return (
@@ -10,7 +9,9 @@ export function OverviewTab() {
         {/* Total Shipments Card */}
         <Card className='bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400'>
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2 text-white'>
-            <CardTitle className='text-sm font-medium'>Total Shipments</CardTitle>
+            <CardTitle className='text-sm font-medium'>
+              Total Shipments
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div className='text-2xl font-bold text-white'>1,234</div>
@@ -21,7 +22,9 @@ export function OverviewTab() {
         {/* Pending Deliveries Card */}
         <Card className='bg-gradient-to-r from-orange-600 via-orange-500 to-orange-400'>
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2 text-white'>
-            <CardTitle className='text-sm font-medium'>Pending Deliveries</CardTitle>
+            <CardTitle className='text-sm font-medium'>
+              Pending Deliveries
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div className='text-2xl font-bold text-white'>+320</div>
@@ -32,7 +35,9 @@ export function OverviewTab() {
         {/* On-Time Deliveries Card */}
         <Card className='bg-gradient-to-r from-green-600 via-green-500 to-green-400'>
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2 text-white'>
-            <CardTitle className='text-sm font-medium'>On-Time Deliveries</CardTitle>
+            <CardTitle className='text-sm font-medium'>
+              On-Time Deliveries
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div className='text-2xl font-bold text-white'>95%</div>
@@ -43,7 +48,9 @@ export function OverviewTab() {
         {/* Active Drivers Card */}
         <Card className='bg-gradient-to-r from-teal-600 via-teal-500 to-teal-400'>
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2 text-white'>
-            <CardTitle className='text-sm font-medium'>Active Drivers</CardTitle>
+            <CardTitle className='text-sm font-medium'>
+              Active Drivers
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div className='text-2xl font-bold text-white'>+128</div>
@@ -54,7 +61,7 @@ export function OverviewTab() {
 
       {/* Supply Chain Overview and Recent Shipments */}
       <div className='grid grid-cols-1 gap-4 lg:grid-cols-7'>
-        <Card className='col-span-1 lg:col-span-4 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-400'>
+        <Card className='col-span-1 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-400 lg:col-span-4'>
           <CardHeader>
             <CardTitle className='text-white'>Supply Chain Overview</CardTitle>
           </CardHeader>
@@ -62,10 +69,12 @@ export function OverviewTab() {
             <SupplyChainOverview />
           </CardContent>
         </Card>
-        <Card className='col-span-1 lg:col-span-3 bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-400'>
+        <Card className='col-span-1 bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-400 lg:col-span-3'>
           <CardHeader>
             <CardTitle className='text-white'>Recent Shipments</CardTitle>
-            <p className='text-sm text-gray-200'>57 shipments dispatched today.</p>
+            <p className='text-sm text-gray-200'>
+              57 shipments dispatched today.
+            </p>
           </CardHeader>
           <CardContent>
             <RecentShipments />
@@ -73,5 +82,5 @@ export function OverviewTab() {
         </Card>
       </div>
     </div>
-  );
+  )
 }

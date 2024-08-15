@@ -24,7 +24,8 @@ export function NotificationsTab() {
         <CardContent>
           <div className='text-2xl font-bold'>3 Critical Items</div>
           <p className='text-xs text-gray-200'>
-            Urgent restocking required for high-demand items in the central warehouse.
+            Urgent restocking required for high-demand items in the central
+            warehouse.
           </p>
         </CardContent>
       </Card>

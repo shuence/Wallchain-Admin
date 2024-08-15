@@ -11,7 +11,6 @@ import { ReportsTab } from './components/tabs/reports'
 import { NotificationsTab } from './components/tabs/notifications'
 // import { OverviewTab, AnalyticsTab, ReportsTab, NotificationsTab } from './components/tabs/tabs'
 
-
 export default function Dashboard() {
   return (
     <Layout>
@@ -26,13 +25,19 @@ export default function Dashboard() {
 
       <Layout.Body>
         <div className='mb-2 flex items-center justify-between space-y-2'>
-          <h1 className='text-2xl font-bold tracking-tight'>Supply Chain Dashboard</h1>
+          <h1 className='text-2xl font-bold tracking-tight'>
+            Supply Chain Dashboard
+          </h1>
           <div className='flex items-center space-x-2'>
             <Button>Download Report</Button>
           </div>
         </div>
 
-        <Tabs orientation='vertical' defaultValue='overview' className='space-y-4'>
+        <Tabs
+          orientation='vertical'
+          defaultValue='overview'
+          className='space-y-4'
+        >
           <div className='w-full overflow-x-auto pb-2'>
             <TabsList>
               <TabsTrigger value='overview'>Overview</TabsTrigger>
@@ -57,7 +62,7 @@ export default function Dashboard() {
         </Tabs>
       </Layout.Body>
     </Layout>
-  );
+  )
 }
 
 const topNav = [
@@ -70,7 +75,6 @@ const topNav = [
     title: 'Shipments',
     href: 'dashboard/shipments',
     isActive: false,
-  
   },
   {
     title: 'Drivers',
@@ -87,4 +91,4 @@ const topNav = [
     href: 'dashboard/settings',
     isActive: false,
   },
-];
+]

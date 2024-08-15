@@ -1,10 +1,9 @@
 // src/components/ShipmentCard.tsx
-import React from 'react';
-import { Warehouse } from '../types';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import React from 'react'
+import { Warehouse } from '../types'
 
 interface ShipmentCardProps {
-  warehouse: Warehouse;
+  warehouse: Warehouse
 }
 
 // Define slot status colors
@@ -12,16 +11,16 @@ const slotStatusColors = {
   occupied: 'bg-red-500',
   available: 'bg-green-500',
   loading: 'bg-green-500',
-  unloading: 'bg-yellow-500'
-};
+  unloading: 'bg-yellow-500',
+}
 
 // Define a mapping for status to slot color
 const getSlotColor = (status: string) => {
-  if (status === 'Occupied') return slotStatusColors.occupied;
-  if (status === 'Loading') return slotStatusColors.loading;
-  if (status === 'Unloading') return slotStatusColors.unloading;
-  return slotStatusColors.available;
-};
+  if (status === 'Occupied') return slotStatusColors.occupied
+  if (status === 'Loading') return slotStatusColors.loading
+  if (status === 'Unloading') return slotStatusColors.unloading
+  return slotStatusColors.available
+}
 
 const ShipmentCard: React.FC<ShipmentCardProps> = ({ warehouse }) => {
   return (
@@ -31,23 +30,59 @@ const ShipmentCard: React.FC<ShipmentCardProps> = ({ warehouse }) => {
         {warehouse.slots.map((slot) => (
           <div
             key={slot.slotId}
-            className={`relative flex items-center justify-center p-4 rounded-lg shadow-lg ${getSlotColor(slot.isOccupied ? 'Occupied' : 'Available')} h-24`}
+            className={`relative flex items-center justify-center rounded-lg p-4 shadow-lg ${getSlotColor(slot.isOccupied ? 'Occupied' : 'Available')} h-24`}
           >
             <div className='absolute inset-0 flex items-center justify-center'>
               {slot.isOccupied && (
-                <div className='hidden group-hover:block bg-gray-800 text-white p-4 rounded-md'>
-                  <h3 className='font-bold text-lg'>Consignment Details</h3>
-                  <p><strong>ID:</strong> {slot.assignedConsignment?.consignmentId}</p>
-                  <p><strong>Type:</strong> {slot.assignedConsignment?.type}</p>
-                  <p><strong>Delivery Time:</strong> {slot.assignedConsignment?.deliveryTime ? new Date(slot.assignedConsignment.deliveryTime).toLocaleString() : ''}</p>
-                  <p><strong>Destination:</strong> {slot.assignedConsignment?.destination}</p>
-                  <p><strong>Status:</strong> {slot.assignedConsignment?.status}</p>
-                  <h3 className='font-bold text-lg mt-2'>Driver Details</h3>
-                  <p><strong>Name:</strong> {slot.assignedDriver?.name}</p>
-                  <p><strong>Contact:</strong> {slot.assignedDriver?.contactNumber}</p>
-                  <p><strong>Job Type:</strong> {slot.assignedDriver?.currentJob.jobType}</p>
-                  <p><strong>Assigned Time:</strong> {slot.assignedDriver?.currentJob.assignedTime && new Date(slot.assignedDriver.currentJob.assignedTime).toLocaleString()}</p>
-                  <p><strong>Estimated Unload Time:</strong> {slot.estimatedUnloadTime ? new Date(slot.estimatedUnloadTime).toLocaleString() : ''}</p>
+                <div className='hidden rounded-md bg-gray-800 p-4 text-white group-hover:block'>
+                  <h3 className='text-lg font-bold'>Consignment Details</h3>
+                  <p>
+                    <strong>ID:</strong>{' '}
+                    {slot.assignedConsignment?.consignmentId}
+                  </p>
+                  <p>
+                    <strong>Type:</strong> {slot.assignedConsignment?.type}
+                  </p>
+                  <p>
+                    <strong>Delivery Time:</strong>{' '}
+                    {slot.assignedConsignment?.deliveryTime
+                      ? new Date(
+                          slot.assignedConsignment.deliveryTime
+                        ).toLocaleString()
+                      : ''}
+                  </p>
+                  <p>
+                    <strong>Destination:</strong>{' '}
+                    {slot.assignedConsignment?.destination}
+                  </p>
+                  <p>
+                    <strong>Status:</strong> {slot.assignedConsignment?.status}
+                  </p>
+                  <h3 className='mt-2 text-lg font-bold'>Driver Details</h3>
+                  <p>
+                    <strong>Name:</strong> {slot.assignedDriver?.name}
+                  </p>
+                  <p>
+                    <strong>Contact:</strong>{' '}
+                    {slot.assignedDriver?.contactNumber}
+                  </p>
+                  <p>
+                    <strong>Job Type:</strong>{' '}
+                    {slot.assignedDriver?.currentJob.jobType}
+                  </p>
+                  <p>
+                    <strong>Assigned Time:</strong>{' '}
+                    {slot.assignedDriver?.currentJob.assignedTime &&
+                      new Date(
+                        slot.assignedDriver.currentJob.assignedTime
+                      ).toLocaleString()}
+                  </p>
+                  <p>
+                    <strong>Estimated Unload Time:</strong>{' '}
+                    {slot.estimatedUnloadTime
+                      ? new Date(slot.estimatedUnloadTime).toLocaleString()
+                      : ''}
+                  </p>
                 </div>
               )}
             </div>
@@ -56,7 +91,7 @@ const ShipmentCard: React.FC<ShipmentCardProps> = ({ warehouse }) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ShipmentCard;
+export default ShipmentCard

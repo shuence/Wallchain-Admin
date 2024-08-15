@@ -1,16 +1,16 @@
 // src/data/driverData.ts
 
 export interface Driver {
-  id: string;
-  name: string;
-  contactNumber: string;
+  id: string
+  name: string
+  contactNumber: string
   currentJob: {
-    jobType: string;
-    assignedTime: string;
-  };
-  status: string;
-  location: string;
-  lastUpdate: string;
+    jobType: string
+    assignedTime: string
+  }
+  status: string
+  location: string
+  lastUpdate: string
 }
 
 export const driverData: Driver[] = [
@@ -63,4 +63,4 @@ export const driverData: Driver[] = [
     lastUpdate: '2024-08-13T12:10:00Z',
   },
   // Add more driver entries as needed
-];
+]
