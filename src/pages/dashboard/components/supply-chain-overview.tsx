@@ -63,19 +63,19 @@ export const SupplyChainOverview = () => {
       <div className='rounded-lg border p-4'>
         <h3 className='text-sm font-medium'>Total Orders</h3>
         <div className='text-2xl font-bold'>{overviewData.totalorders}</div>
-        </div>
-        <div className='rounded-lg border p-4'>
-          <h3 className='text-sm font-medium'>Total Revenue</h3>
-          <div className='text-2xl font-bold'>{overviewData.totalRevenue}</div>
-          </div>
-          <div className='rounded-lg border p-4'>
-            <h3 className='text-sm font-medium'>Total Cost</h3>
-            <div className='text-2xl font-bold'>{overviewData.totalCost}</div>
-            </div>
-            <div className='rounded-lg border p-4'>
-              <h3 className='text-sm font-medium'>Total Profit</h3>
-              <div className='text-2xl font-bold'>{overviewData.totalProfit}</div>
-            </div>
+      </div>
+      <div className='rounded-lg border p-4'>
+        <h3 className='text-sm font-medium'>Total Revenue</h3>
+        <div className='text-2xl font-bold'>{overviewData.totalRevenue}</div>
+      </div>
+      <div className='rounded-lg border p-4'>
+        <h3 className='text-sm font-medium'>Total Cost</h3>
+        <div className='text-2xl font-bold'>{overviewData.totalCost}</div>
+      </div>
+      <div className='rounded-lg border p-4'>
+        <h3 className='text-sm font-medium'>Total Profit</h3>
+        <div className='text-2xl font-bold'>{overviewData.totalProfit}</div>
+      </div>
     </div>
   )
 }
