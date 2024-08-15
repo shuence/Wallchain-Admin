@@ -4,6 +4,7 @@ import {
   IconSettings,
   IconUsers,
   IconPackage,
+  IconMap,
 } from '@tabler/icons-react'
 
 export interface NavLink {
@@ -42,6 +43,13 @@ export const sidelinks: SideLink[] = [
     label: '',
     href: '/dashboard/warehouses',
     icon: <IconUsers size={18} />,
+  },
+
+  {
+    title: 'Realtime Tracking',
+    label: '',
+    href: '/tracking',
+    icon: <IconMap size={18} />,
   },
 
   {

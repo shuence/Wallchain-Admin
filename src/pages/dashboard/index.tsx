@@ -88,7 +88,7 @@ const topNav = [
   },
   {
     title: 'Settings',
-    href: 'dashboard/settings',
+    href: '/settings',
     isActive: false,
   },
 ]
