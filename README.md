@@ -90,3 +90,21 @@ WallChain's Admin Panel is built to overcome these challenges with innovative fe
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/your-repo/wallchain-admin-panel.git
+
+🚀 Conclusion
+The WallChain Admin Panel is more than just a management tool—it's a game-changer for the logistics industry. By providing real-time insights, customizable dashboards, and AI-driven analytics, WallChain addresses the limitations of traditional platforms, empowering businesses to optimize their supply chains like never before.   
+
+# Hi, We are InnovisionSquad
+
+## 🤝 Contributors
+
+We are a team from Deogiri Institute of Engineering And Management Studies Chh. Sambhajinagar.
+
+| [Sanika Chavan ](https://linkedin.com/in/sanika-chavan-52457b236/) | [Shubham Pitekar](https://linkedin.com/in/shuence) | [Tabish](https://www.linkedin.com/in/tabish-khan-04a477154/) | [Mohammed Rehan](https://www.linkedin.com/in/mdrehan15/) |
+| ----------------------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| <img src="https://avatars.githubusercontent.com/u/116996971?v=4" style="width:150px; height:150px;"> | <img src="https://avatars.githubusercontent.com/u/65482186?v=4" style="width:150px; height:150px;"> | <img src="https://i.postimg.cc/W3BTgQD2/Whats-App-Image-2024-08-15-at-10-48-36-PM.jpg" style="width:150px; height:150px;"> | <img src="https://i.postimg.cc/bvPLDLFc/image.jpg" style="width:150px; height:150px;"> |
+
+## Happy Innovating 💯
+
+Made with love from [InnovsionSquad]() ❤️
+   
